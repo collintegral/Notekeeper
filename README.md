@@ -6,8 +6,6 @@ Notekeeper is a console application for creating, viewing, and editing notes.
 
 I created this application for quick jot-down notes. I run a tabletop game, and it's useful to have somewhere to write things down that I can see them later.
 
-[Software Demo Video](http://youtube.link.goes.here)
-
 # Development Environment
 
 I used several console menuing packages during the construction of this application, but none of them seemed to quite serve the purpose I need; they were all either quite barren, or a little too inflexible when it came to leaving and reentering their menu flows. Eventually, I stripped them away and made a very basic C# menu class myself. I'm interested in expanding on it in the future, perhaps even making my own console menuing package.
