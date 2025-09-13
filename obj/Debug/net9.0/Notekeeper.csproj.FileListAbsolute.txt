@@ -12,3 +12,4 @@ C:\Users\colli\OneDrive\Desktop\Collin Stuff\Classwork\CS\CSE 310\Notekeeper\obj
 C:\Users\colli\OneDrive\Desktop\Collin Stuff\Classwork\CS\CSE 310\Notekeeper\obj\Debug\net9.0\Notekeeper.pdb
 C:\Users\colli\OneDrive\Desktop\Collin Stuff\Classwork\CS\CSE 310\Notekeeper\obj\Debug\net9.0\Notekeeper.genruntimeconfig.cache
 C:\Users\colli\OneDrive\Desktop\Collin Stuff\Classwork\CS\CSE 310\Notekeeper\obj\Debug\net9.0\ref\Notekeeper.dll
+C:\Users\colli\OneDrive\Desktop\Collin Stuff\Classwork\CS\CSE 310\Notekeeper\obj\Debug\net9.0\Notekeeper.sourcelink.json
