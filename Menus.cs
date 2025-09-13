@@ -4,6 +4,7 @@ public class Menus
 {
     public static Menu mainMenu = new("Notekeeper");
 
+// Constructor for main menu
     public void ConstructMainMenu()
     {
         var newNote = new MenuOption("New Note", () => NewNote().GetAwaiter().GetResult());
@@ -14,11 +15,13 @@ public class Menus
         mainMenu.AddOption(quit);
     }
         
+// Displays Main Menu
     public void MainMenu()
     {
         mainMenu.Display()();
     }
 
+// Dynamically reads the notes into a new Load Menu for display, then shares them
     public static void LoadMenuSetup()
     {
         Console.Clear();
@@ -37,6 +40,7 @@ public class Menus
         loadMenu.Display()();
     }
 
+// Calls the NoteFunction for a new note and walks the user through it
     public static async Task NewNote()
     {
         Console.Clear();

@@ -5,6 +5,7 @@ public static class IEnumerableExtensions {
 
 namespace Notekeeper
 {
+    //Menus contain a title, the list of Menu Options, and a selector to show the currently-chosen optioin.
     public class Menu(string title, List<MenuOption>? options = null)
     {
         private readonly string Title = title;
@@ -21,6 +22,7 @@ namespace Notekeeper
             Options.Add(option);
         }
 
+// Displaying is done in a loop, with a > next to the chosen option.
         public Action Display()
         {
             var exit = false;
@@ -32,7 +34,6 @@ namespace Notekeeper
                 Console.WriteLine($"{title}\n");
                 foreach (var (option, index) in Options.WithIndex())
                 {
-                    Console.ResetColor();
                     if (index == Sel)
                     {
                         Console.WriteLine($"> {option.Label}");

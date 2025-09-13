@@ -2,10 +2,12 @@ using System.Diagnostics;
 
 public static class NoteFunctions
 {
+    // Directories are compiled
     static readonly string currentDir = Directory.GetCurrentDirectory();
     static readonly string notesDir = Path.Combine(currentDir, "notes");
     static readonly string tempDir = Path.Combine(notesDir, "tmp");
 
+// A new note is named using datetime and a user-inputted name, then Notepad is opened to fill it.
     static public async Task NewNote()
     {
         Console.WriteLine("Please enter the name of your note:");
@@ -20,6 +22,7 @@ public static class NoteFunctions
         return;
     }
 
+// Previously created notes are loaded and returned.
     static public List<string> LoadNoteList()
     {
         Directory.CreateDirectory(notesDir);
@@ -35,6 +38,7 @@ public static class NoteFunctions
         return notes;
     }
 
+// A chosen existing note is loaded, a temporary one is created, and Notepad is called to make edits.
     static public async Task LoadNote(string noteName)
     {
         Console.Clear();
@@ -50,11 +54,12 @@ public static class NoteFunctions
         return;
     }
 
+// The user can decide whether to make more edits to their loaded note, save their edits permanently, or return without saving.
     static public async Task SaveNote(string oldNote, string newNote)
     {
         string newNoteContent = File.ReadAllText(newNote);
 
-       Console.Clear();
+        Console.Clear();
         Console.WriteLine("= = = = = = = = =\nOriginal Note:");
         Console.WriteLine(File.ReadAllText(oldNote));
         Console.WriteLine("= = = = = = = = =\nEdited Note:");
@@ -98,6 +103,7 @@ public static class NoteFunctions
         }
     }
 
+// A function that runs Notepad on the given file and waits until the user has closed it to continue.
     static public async Task OpenNotepad(string fileName)
     {
         var notepadProcess = new Process
