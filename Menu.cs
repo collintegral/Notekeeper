@@ -55,7 +55,8 @@ namespace Notekeeper
                         Sel = (Sel + 1) % Options.Count;
                         break;
                     case ConsoleKey.Enter:
-                        return Options[Sel].Action;
+                        Options[Sel].Execute();
+                        break;
                     case ConsoleKey.Escape:
                         Environment.Exit(0);
                         break;
